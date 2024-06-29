@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fuel Delivery App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to EZYFILL APP</h1>
+  </header><br>
+  <div class="container">
+    <section class="main-section">
+      <div class="input-box">
+        <div class="input-group">
+          <label for="fuelType">Fuel Type:</label>
+          <select id="fuelType" name="fuelType">
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <div class="input-group">
+          <label for="fuelCost">Fuel Cost (per liter):</label>
+          <input type="number" id="fuelCost" name="fuelCost" placeholder="Calculated automatically" readonly>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <div class="input-group">
+          <label for="fuelQuantity">Fuel Quantity (in liters):</label>
+          <input type="number" id="fuelQuantity" name="fuelQuantity" placeholder="Enter fuel quantity">
+        </div>
+      </div>
+
+      <div class="input-box">
+        <div class="input-group">
+          <label for="totalCost">Total Cost:</label>
+          <input type="number" id="totalCost" name="totalCost" placeholder="Calculated automatically" readonly>
+        </div>
+      </div><br>
+<button onclick="getLocation()">Find Nearby Fuel Stations</button>
+    </section>
+  <main>
+    <section class="stations">
+      <h2>Nearby Fuel Stations</h2>
+      <ul id="stationsList"></ul>
+    </section>
+    
+    <section class="selected-station" id="selectedStation"></section>
+    
+    <section class="order-confirmation" id="orderConfirmation"></section>
+
+    <section class="delivery-status" id="deliveryStatus"></section>
+    
+    <section class="payment-options" id="paymentOptions"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
